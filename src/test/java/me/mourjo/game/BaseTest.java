@@ -6,7 +6,7 @@ import me.mourjo.game.core.action.QuitMove;
 import me.mourjo.game.core.action.RockMove;
 import me.mourjo.game.core.action.ScissorsMove;
 
-public class BaseMoveTest {
+public class BaseTest {
 
     public Move paperMove = PaperMove.getInstance();
     public Move scissorsMove = ScissorsMove.getInstance();

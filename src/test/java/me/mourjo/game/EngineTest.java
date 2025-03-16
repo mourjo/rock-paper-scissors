@@ -9,8 +9,7 @@ import me.mourjo.game.core.actor.ComputerPlayer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class EngineTest extends BaseMoveTest {
-
+class EngineTest extends BaseTest {
     Engine engine = new Engine();
 
     @Test
@@ -66,7 +65,7 @@ class EngineTest extends BaseMoveTest {
 
     static class InsistentPlayer extends ComputerPlayer {
 
-        private Move alwaysMove;
+        private final Move alwaysMove;
 
         public InsistentPlayer(Move move) {
             alwaysMove = move;

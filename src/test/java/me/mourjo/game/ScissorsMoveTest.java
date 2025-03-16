@@ -7,8 +7,7 @@ import static me.mourjo.game.core.action.MoveResult.WIN;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ScissorsMoveTest extends BaseMoveTest {
-
+public class ScissorsMoveTest extends BaseTest {
     @Test
     void wins() {
         Assertions.assertEquals(WIN, scissorsMove.fight(paperMove));
