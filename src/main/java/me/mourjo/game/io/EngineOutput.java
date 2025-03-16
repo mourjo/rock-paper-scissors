@@ -1,4 +1,4 @@
-package me.mourjo.game.core;
+package me.mourjo.game.io;
 
 import me.mourjo.game.core.action.Move;
 import me.mourjo.game.core.action.MoveResult;

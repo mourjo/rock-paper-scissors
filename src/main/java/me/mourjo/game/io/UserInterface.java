@@ -2,7 +2,6 @@ package me.mourjo.game.io;
 
 import java.util.Scanner;
 import me.mourjo.game.core.Engine;
-import me.mourjo.game.core.EngineInput;
 import me.mourjo.game.core.action.Move;
 import me.mourjo.game.core.action.QuitMove;
 

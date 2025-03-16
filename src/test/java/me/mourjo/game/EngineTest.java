@@ -2,7 +2,7 @@ package me.mourjo.game;
 
 import java.util.HashSet;
 import me.mourjo.game.core.Engine;
-import me.mourjo.game.core.EngineInput;
+import me.mourjo.game.io.EngineInput;
 import me.mourjo.game.core.action.Move;
 import me.mourjo.game.core.action.MoveResult;
 import me.mourjo.game.core.actor.ComputerPlayer;

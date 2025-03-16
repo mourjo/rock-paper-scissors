@@ -8,6 +8,8 @@ import me.mourjo.game.core.action.QuitMove;
 import me.mourjo.game.core.action.RockMove;
 import me.mourjo.game.core.action.ScissorsMove;
 import me.mourjo.game.core.actor.ComputerPlayer;
+import me.mourjo.game.io.EngineInput;
+import me.mourjo.game.io.EngineOutput;
 
 public class Engine {
 
