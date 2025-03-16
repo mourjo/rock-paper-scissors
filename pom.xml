@@ -1,0 +1,83 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <artifactId>rps</artifactId>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <!-- See https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html-->
+            <failIfNoTests>true</failIfNoTests>
+          </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <annotationProcessorPaths>
+              <path>
+                <artifactId>lombok</artifactId>
+                <groupId>org.projectlombok</groupId>
+                <version>1.18.34</version>
+              </path>
+            </annotationProcessorPaths>
+          </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.14.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  <dependencies>
+    <dependency>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <version>1.18.34</version>
+    </dependency>
+    <dependency>
+      <artifactId>junit-jupiter</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <artifactId>junit-platform-launcher</artifactId>
+      <groupId>org.junit.platform</groupId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <artifactId>junit-bom</artifactId>
+        <groupId>org.junit</groupId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>5.10.3</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <groupId>me.mourjo</groupId>
+  <modelVersion>4.0.0</modelVersion>
+  <name>rps</name>
+  <packaging>jar</packaging>
+
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+
+  <url>http://maven.apache.org</url>
+
+  <version>1.0-SNAPSHOT</version>
+</project>
