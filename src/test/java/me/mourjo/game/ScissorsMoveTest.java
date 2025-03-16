@@ -1,26 +1,29 @@
 package me.mourjo.game;
 
-import static me.mourjo.game.core.action.MoveResult.*;
+import static me.mourjo.game.core.action.MoveResult.DRAW;
+import static me.mourjo.game.core.action.MoveResult.LOSE;
+import static me.mourjo.game.core.action.MoveResult.WIN;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ScissorsMoveTest extends BaseMoveTest {
+
     @Test
-    void wins(){
+    void wins() {
         Assertions.assertEquals(WIN, scissorsMove.fight(paperMove));
         Assertions.assertEquals(WIN, rockMove.fight(scissorsMove));
     }
 
     @Test
-    void losses(){
+    void losses() {
         Assertions.assertEquals(LOSE, scissorsMove.fight(rockMove));
         Assertions.assertEquals(LOSE, paperMove.fight(scissorsMove));
 
     }
 
     @Test
-    void draws(){
+    void draws() {
         Assertions.assertEquals(DRAW, scissorsMove.fight(scissorsMove));
     }
 }

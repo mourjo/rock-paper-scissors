@@ -1,7 +1,7 @@
 package me.mourjo;
 
-import me.mourjo.game.io.UserInterface;
 import me.mourjo.game.core.Engine;
+import me.mourjo.game.io.UserInterface;
 
 /**
  * Hello world!

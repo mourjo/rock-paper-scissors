@@ -1,13 +1,14 @@
 package me.mourjo.game.io;
 
-import java.util.Optional;
 import java.util.Scanner;
+import me.mourjo.game.core.Engine;
 import me.mourjo.game.core.EngineInput;
 import me.mourjo.game.core.action.Move;
-import me.mourjo.game.core.Engine;
 import me.mourjo.game.core.action.QuitMove;
 
 public class UserInterface {
+
+    static final String DELIM = "--------------------------------------";
 
     private static String movePrompt(Engine engine) {
         StringBuilder sb = new StringBuilder();
@@ -21,8 +22,6 @@ public class UserInterface {
         return sb.toString();
     }
 
-    static final String DELIM = "--------------------------------------";
-
     public static void startRepl(Engine engine) {
         String prompt = movePrompt(engine);
         Scanner scanner = new Scanner(System.in);
@@ -32,7 +31,7 @@ public class UserInterface {
             System.out.print("Input: ");
 
             boolean shouldLoop = readEvalPrint(scanner, engine);
-            if(!shouldLoop) {
+            if (!shouldLoop) {
                 break;
             }
 
@@ -44,7 +43,7 @@ public class UserInterface {
 
         var move = engine.processInput(input);
 
-        if(move.isEmpty()) {
+        if (move.isEmpty()) {
             System.out.println("Invalid input, try again");
             System.out.println();
             return true;
@@ -68,7 +67,7 @@ public class UserInterface {
         System.out.println("Player played: " + engineOutput.playerMove());
         System.out.println("Computer played: " + engineOutput.computerMove());
         System.out.print("Result: ");
-        switch (engineOutput.moveResultForPlayer()){
+        switch (engineOutput.moveResultForPlayer()) {
             case WIN -> System.out.println("Player Wins");
             case LOSE -> System.out.println("Player Loses");
             case DRAW -> System.out.println("It's a draw");

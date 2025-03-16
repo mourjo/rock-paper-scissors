@@ -1,11 +1,20 @@
 package me.mourjo.game.core.action;
 
 public final class ScissorsMove extends Move {
+
     private static Move INSTANCE;
 
     private ScissorsMove() {
 
     }
+
+    public static Move getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new ScissorsMove();
+        }
+        return INSTANCE;
+    }
+
     @Override
     public String getDescription() {
         return "Scissors";
@@ -21,14 +30,7 @@ public final class ScissorsMove extends Move {
         return switch (otherMove) {
             case PaperMove p -> MoveResult.WIN;
             case RockMove r -> MoveResult.LOSE;
-            default ->  MoveResult.DRAW;
+            default -> MoveResult.DRAW;
         };
-    }
-
-    public static Move getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new ScissorsMove();
-        }
-        return INSTANCE;
     }
 }

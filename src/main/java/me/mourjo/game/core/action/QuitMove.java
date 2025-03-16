@@ -4,7 +4,15 @@ public final class QuitMove extends Move {
 
     private static Move INSTANCE;
 
-    private QuitMove() {}
+    private QuitMove() {
+    }
+
+    public static Move getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new QuitMove();
+        }
+        return INSTANCE;
+    }
 
     @Override
     public String getDescription() {
@@ -19,12 +27,5 @@ public final class QuitMove extends Move {
     @Override
     public MoveResult fight(Move otherMove) {
         throw new IllegalArgumentException("This move is invalid");
-    }
-
-    public static Move getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new QuitMove();
-        }
-        return INSTANCE;
     }
 }

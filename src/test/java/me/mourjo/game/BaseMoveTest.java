@@ -7,6 +7,7 @@ import me.mourjo.game.core.action.RockMove;
 import me.mourjo.game.core.action.ScissorsMove;
 
 public class BaseMoveTest {
+
     public Move paperMove = PaperMove.getInstance();
     public Move scissorsMove = ScissorsMove.getInstance();
     public Move rockMove = RockMove.getInstance();

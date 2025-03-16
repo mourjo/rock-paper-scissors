@@ -2,17 +2,17 @@ package me.mourjo.game.core;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
-import me.mourjo.game.core.actor.ComputerPlayer;
 import me.mourjo.game.core.action.Move;
 import me.mourjo.game.core.action.PaperMove;
 import me.mourjo.game.core.action.QuitMove;
 import me.mourjo.game.core.action.RockMove;
 import me.mourjo.game.core.action.ScissorsMove;
+import me.mourjo.game.core.actor.ComputerPlayer;
 
 public class Engine {
-    private Random random = new Random();
+
     private final ComputerPlayer computerPlayer;
+    private List<Move> allMoves = buildAllMoves();
 
     public Engine(ComputerPlayer computerPlayer) {
         this.computerPlayer = computerPlayer;
@@ -30,9 +30,6 @@ public class Engine {
             QuitMove.getInstance()
         );
     }
-
-    private List<Move> allMoves = buildAllMoves();
-
 
     public Optional<Move> processInput(String input) {
         for (Move move : allMoves) {
