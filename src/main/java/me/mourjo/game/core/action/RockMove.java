@@ -1,33 +1,32 @@
-package me.mourjo.game;
+package me.mourjo.game.core.action;
 
-public final class ScissorsMove extends Move {
+public final class RockMove extends Move{
     private static Move INSTANCE;
-
-    private ScissorsMove() {
+    private RockMove() {
 
     }
     @Override
     public String getDescription() {
-        return "Scissors";
+        return "Rock";
     }
 
     @Override
     public String getKeyboardShortcut() {
-        return "s";
+        return "r";
     }
 
     @Override
     public MoveResult fight(Move otherMove) {
         return switch (otherMove) {
-            case PaperMove p -> MoveResult.WIN;
-            case RockMove r -> MoveResult.LOSE;
+            case ScissorsMove s -> MoveResult.WIN;
+            case PaperMove s -> MoveResult.LOSE;
             default ->  MoveResult.DRAW;
         };
     }
 
     public static Move getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new ScissorsMove();
+            INSTANCE = new RockMove();
         }
         return INSTANCE;
     }

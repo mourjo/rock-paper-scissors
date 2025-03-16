@@ -1,8 +1,14 @@
-package me.mourjo.game;
+package me.mourjo.game.core;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import me.mourjo.game.core.actor.ComputerPlayer;
+import me.mourjo.game.core.action.Move;
+import me.mourjo.game.core.action.PaperMove;
+import me.mourjo.game.core.action.QuitMove;
+import me.mourjo.game.core.action.RockMove;
+import me.mourjo.game.core.action.ScissorsMove;
 
 public class Engine {
     private Random random = new Random();

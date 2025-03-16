@@ -1,11 +1,9 @@
 package me.mourjo.game;
 
-import static me.mourjo.game.MoveResult.DRAW;
-import static me.mourjo.game.MoveResult.LOSE;
-import static me.mourjo.game.MoveResult.WIN;
-import static org.junit.jupiter.api.Assertions.*;
+import static me.mourjo.game.core.action.MoveResult.DRAW;
+import static me.mourjo.game.core.action.MoveResult.LOSE;
+import static me.mourjo.game.core.action.MoveResult.WIN;
 
-import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

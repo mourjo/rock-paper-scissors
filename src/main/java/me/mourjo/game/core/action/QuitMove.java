@@ -1,4 +1,4 @@
-package me.mourjo.game;
+package me.mourjo.game.core.action;
 
 public final class QuitMove extends Move {
 

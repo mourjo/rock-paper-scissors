@@ -1,7 +1,6 @@
 package me.mourjo.game;
 
-import static me.mourjo.game.MoveResult.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static me.mourjo.game.core.action.MoveResult.*;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,4 @@
-package me.mourjo.game;
-
-import java.util.Set;
+package me.mourjo.game.core.action;
 
 public sealed abstract class Move permits PaperMove, QuitMove, RockMove, ScissorsMove {
 

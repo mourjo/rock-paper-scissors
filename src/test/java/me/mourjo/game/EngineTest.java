@@ -1,9 +1,11 @@
 package me.mourjo.game;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.HashSet;
-import java.util.Set;
+import me.mourjo.game.core.Engine;
+import me.mourjo.game.core.EngineInput;
+import me.mourjo.game.core.action.Move;
+import me.mourjo.game.core.action.MoveResult;
+import me.mourjo.game.core.actor.ComputerPlayer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

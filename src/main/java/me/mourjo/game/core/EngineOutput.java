@@ -1,6 +1,7 @@
-package me.mourjo.game;
+package me.mourjo.game.core;
 
-import lombok.Getter;
+import me.mourjo.game.core.action.Move;
+import me.mourjo.game.core.action.MoveResult;
 
 public record EngineOutput (
     Move playerMove,
