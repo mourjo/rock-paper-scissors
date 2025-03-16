@@ -12,7 +12,7 @@ The winner is determined by the rules:
 - Rock beats scissors 
 - Scissors beats paper
 
-This is a program that plays Paper-Rock-Scissors between the computer and a real player.
+This is a program that plays Rock-Paper-Scissors between the computer and a real player.
 
 ## Compiling the system
 
