@@ -1,14 +1,14 @@
 package me.mourjo.game.core.action;
 
-public final class RockMove extends Move {
+public final class RockMove extends PlayableMove {
 
-    private static Move INSTANCE;
+    private static RockMove INSTANCE;
 
     private RockMove() {
 
     }
 
-    public static Move getInstance() {
+    public static RockMove getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new RockMove();
         }
@@ -26,11 +26,11 @@ public final class RockMove extends Move {
     }
 
     @Override
-    public MoveResult fight(Move otherMove) {
+    public MoveResult play(PlayableMove otherMove) {
         return switch (otherMove) {
             case ScissorsMove s -> MoveResult.WIN;
             case PaperMove s -> MoveResult.LOSE;
-            default -> MoveResult.DRAW;
+            case RockMove r -> MoveResult.DRAW;
         };
     }
 }

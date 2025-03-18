@@ -1,7 +1,7 @@
 package me.mourjo.game.io;
 
-import me.mourjo.game.core.action.Move;
+import me.mourjo.game.core.action.PlayableMove;
 
-public record EngineInput(Move playerMove) {
+public record EngineInput(PlayableMove playerMove) {
 
 }

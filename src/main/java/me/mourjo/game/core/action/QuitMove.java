@@ -23,9 +23,4 @@ public final class QuitMove extends Move {
     public String getKeyboardShortcut() {
         return "q";
     }
-
-    @Override
-    public MoveResult fight(Move otherMove) {
-        throw new IllegalArgumentException("This move is invalid");
-    }
 }

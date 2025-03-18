@@ -3,6 +3,7 @@ package me.mourjo.game.io;
 import java.util.Scanner;
 import me.mourjo.game.core.Engine;
 import me.mourjo.game.core.action.Move;
+import me.mourjo.game.core.action.PlayableMove;
 import me.mourjo.game.core.action.QuitMove;
 
 public class UserInterface {
@@ -49,16 +50,16 @@ public class UserInterface {
         }
 
         Move playerMove = move.get();
-        if (playerMove.equals(QuitMove.getInstance())) {
+        if (playerMove instanceof QuitMove) {
             System.out.println("Exiting, bye!");
             return false;
+        } else {
+            eval(engine, (PlayableMove) playerMove);
+            return true;
         }
-
-        eval(engine, playerMove);
-        return true;
     }
 
-    private static void eval(Engine engine, Move playerMove) {
+    private static void eval(Engine engine, PlayableMove playerMove) {
         var engineInput = new EngineInput(playerMove);
         var engineOutput = engine.play(engineInput);
         System.out.println();

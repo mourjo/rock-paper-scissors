@@ -2,14 +2,15 @@ package me.mourjo.game;
 
 import java.util.HashSet;
 import me.mourjo.game.core.Engine;
-import me.mourjo.game.io.EngineInput;
-import me.mourjo.game.core.action.Move;
 import me.mourjo.game.core.action.MoveResult;
+import me.mourjo.game.core.action.PlayableMove;
 import me.mourjo.game.core.actor.ComputerPlayer;
+import me.mourjo.game.io.EngineInput;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class EngineTest extends BaseTest {
+
     Engine engine = new Engine();
 
     @Test
@@ -36,7 +37,7 @@ class EngineTest extends BaseTest {
         Assertions.assertTrue(userMoves.isEmpty());
     }
 
-    void play(Move playerMove, Move computerMove, MoveResult expectedResult) {
+    void play(PlayableMove playerMove, PlayableMove computerMove, MoveResult expectedResult) {
         Engine deterministicEngine = new Engine(new InsistentPlayer(computerMove));
 
         var input = new EngineInput(playerMove);
@@ -65,14 +66,14 @@ class EngineTest extends BaseTest {
 
     static class InsistentPlayer extends ComputerPlayer {
 
-        private final Move alwaysMove;
+        private final PlayableMove alwaysMove;
 
-        public InsistentPlayer(Move move) {
+        public InsistentPlayer(PlayableMove move) {
             alwaysMove = move;
         }
 
         @Override
-        public Move makeMove() {
+        public PlayableMove makeMove() {
             return alwaysMove;
         }
     }

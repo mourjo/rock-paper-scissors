@@ -8,21 +8,22 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ScissorsMoveTest extends BaseTest {
+
     @Test
     void wins() {
-        Assertions.assertEquals(WIN, scissorsMove.fight(paperMove));
-        Assertions.assertEquals(WIN, rockMove.fight(scissorsMove));
+        Assertions.assertEquals(WIN, scissorsMove.play(paperMove));
+        Assertions.assertEquals(WIN, rockMove.play(scissorsMove));
     }
 
     @Test
     void losses() {
-        Assertions.assertEquals(LOSE, scissorsMove.fight(rockMove));
-        Assertions.assertEquals(LOSE, paperMove.fight(scissorsMove));
+        Assertions.assertEquals(LOSE, scissorsMove.play(rockMove));
+        Assertions.assertEquals(LOSE, paperMove.play(scissorsMove));
 
     }
 
     @Test
     void draws() {
-        Assertions.assertEquals(DRAW, scissorsMove.fight(scissorsMove));
+        Assertions.assertEquals(DRAW, scissorsMove.play(scissorsMove));
     }
 }

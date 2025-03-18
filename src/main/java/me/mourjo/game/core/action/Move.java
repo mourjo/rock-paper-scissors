@@ -1,12 +1,10 @@
 package me.mourjo.game.core.action;
 
-public sealed abstract class Move permits PaperMove, QuitMove, RockMove, ScissorsMove {
+public sealed abstract class Move permits PlayableMove, QuitMove {
 
     abstract public String getDescription();
 
     abstract public String getKeyboardShortcut();
-
-    abstract public MoveResult fight(Move otherMove);
 
     @Override
     public String toString() {

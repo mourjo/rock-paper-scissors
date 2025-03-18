@@ -45,7 +45,7 @@ public class Engine {
     public EngineOutput play(EngineInput input) {
         var playerMove = input.playerMove();
         var computerMove = computerPlayer.makeMove();
-        var result = playerMove.fight(computerMove);
+        var result = playerMove.play(computerMove);
         return new EngineOutput(
             playerMove,
             computerMove,
