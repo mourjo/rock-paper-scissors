@@ -64,8 +64,8 @@ public class UserInterface {
         var engineOutput = engine.play(engineInput);
         System.out.println();
         System.out.println(DELIM);
-        System.out.println("Player played: " + engineOutput.playerMove());
-        System.out.println("Computer played: " + engineOutput.computerMove());
+        System.out.println("Player played: " + engineOutput.playerMove().getDescription());
+        System.out.println("Computer played: " + engineOutput.computerMove().getDescription());
         System.out.print("Result: ");
         switch (engineOutput.moveResultForPlayer()) {
             case WIN -> System.out.println("Player Wins");

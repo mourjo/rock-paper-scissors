@@ -1,6 +1,6 @@
 package me.mourjo.game.core.action;
 
-public final class QuitMove extends Move {
+public final class QuitMove implements Move {
 
     private static Move INSTANCE;
 

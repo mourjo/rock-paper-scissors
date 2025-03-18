@@ -1,6 +1,6 @@
 package me.mourjo.game.core.action;
 
-public final class ScissorsMove extends PlayableMove {
+public final class ScissorsMove implements PlayableMove {
 
     private static ScissorsMove INSTANCE;
 

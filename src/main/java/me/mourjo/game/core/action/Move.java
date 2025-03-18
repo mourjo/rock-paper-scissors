@@ -1,13 +1,8 @@
 package me.mourjo.game.core.action;
 
-public sealed abstract class Move permits PlayableMove, QuitMove {
+public sealed interface Move permits PlayableMove, QuitMove {
 
-    abstract public String getDescription();
+    String getDescription();
 
-    abstract public String getKeyboardShortcut();
-
-    @Override
-    public String toString() {
-        return getDescription();
-    }
+    String getKeyboardShortcut();
 }

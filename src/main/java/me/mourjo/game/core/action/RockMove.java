@@ -1,6 +1,6 @@
 package me.mourjo.game.core.action;
 
-public final class RockMove extends PlayableMove {
+public final class RockMove implements PlayableMove {
 
     private static RockMove INSTANCE;
 
